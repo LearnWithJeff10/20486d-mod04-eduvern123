@@ -17,12 +17,12 @@ namespace ControllersExample.Controllers
             };
             return View(model);
 
-            public IActionResult ParamExample(string id)
+            IActionResult ParamExample(string id)
             {
                 return Content("My param is: " + id);
             }
 
-            public IActionResult RouteDataExample()
+            IActionResult RouteDataExample()
             {
                 string controller = (string)RouteData.Values["Controller"];
                 string action = (string)RouteData.Values["action"];
@@ -30,13 +30,13 @@ namespace ControllersExample.Controllers
                 return Content($"Action information: the action is in {controller} controller, the action name is {action} and the id value is {id}");
             }
 
-            public IActionResult ViewBagExample()
+            IActionResult ViewBagExample()
             {
                 ViewBag.Message = "ViewBag Example";
                 return View();
             }
 
-            public IActionResult ViewDataExample()
+            IActionResult ViewDataExample()
             {
                 ViewData["Message"] = "ViewData Example";
                 return View();
