@@ -16,6 +16,11 @@ namespace ControllersExample.Controllers
                 Sentence = "Welcome to module 4 demo 1" 
             };
             return View(model);
+
+            public IActionResult ParamExample(string id)
+            {
+                return Content("My param is: " + id);
+            }
         }
     }
 }
