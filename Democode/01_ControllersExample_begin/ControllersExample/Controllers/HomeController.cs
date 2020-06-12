@@ -29,6 +29,12 @@ namespace ControllersExample.Controllers
                 string id = (string)RouteData.Values["id"];
                 return Content($"Action information: the action is in {controller} controller, the action name is {action} and the id value is {id}");
             }
+
+            public IActionResult ViewBagExample()
+            {
+                ViewBag.Message = "ViewBag Example";
+                return View();
+            }
         }
     }
 }
